@@ -165,10 +165,10 @@ impl TokenBlacklist {
         Cache::new(Duration::from_secs(3600)) // 1 hour default
     }
 
-pub fn is_blacklisted(&self, token: &str) -> bool {
-    // Convert &str to String then borrow as &String
-    self.get(&token.to_string()).is_some()
-}
+    pub fn is_blacklisted(&self, token: &str) -> bool {
+        // Convert &str to String then borrow as &String
+        self.get(&token.to_string()).is_some()
+    }
 
     pub fn blacklist_token(&self, token: String, ttl_secs: u64) {
         self.insert_with_ttl(token, true, Duration::from_secs(ttl_secs));

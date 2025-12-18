@@ -1,6 +1,8 @@
 // src/interfaces/openapi.rs
 use crate::application::*;
-use crate::interfaces::{admin_handlers, audit_handlers, auth_handlers, health_handlers, sync_handlers, user_handlers};
+use crate::interfaces::{
+    admin_handlers, audit_handlers, auth_handlers, health_handlers, sync_handlers, user_handlers,
+};
 use utoipa::openapi::security::{HttpAuthScheme, HttpBuilder, SecurityScheme};
 use utoipa::{Modify, OpenApi};
 
@@ -118,9 +120,7 @@ impl Modify for SecurityAddon {
                     HttpBuilder::new()
                         .scheme(HttpAuthScheme::Bearer)
                         .bearer_format("JWT")
-                        .description(Some(
-                            "JWT token obtained from /api/v1/auth/login endpoint"
-                        ))
+                        .description(Some("JWT token obtained from /api/v1/auth/login endpoint"))
                         .build(),
                 ),
             )

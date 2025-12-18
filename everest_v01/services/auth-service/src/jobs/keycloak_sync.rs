@@ -1,5 +1,5 @@
 // src/jobs/keycloak_sync.rs
-use crate::core::{constants::*, errors::AppResult, AppError};
+use crate::core::{AppError, constants::*, errors::AppResult};
 use crate::domain::repositories::UserRepository;
 use crate::infrastructure::KeycloakClient;
 use chrono::Utc;
@@ -40,7 +40,7 @@ impl KeycloakSyncJob {
     /// Start the sync job
     pub async fn start(self: Arc<Self>) {
         let mut interval = interval(self.sync_interval);
-        
+
         tracing::info!(
             "Keycloak sync job started with interval: {:?}",
             self.sync_interval
@@ -48,7 +48,7 @@ impl KeycloakSyncJob {
 
         loop {
             interval.tick().await;
-            
+
             match self.run_sync().await {
                 Ok(result) => {
                     tracing::info!(
@@ -89,7 +89,10 @@ impl KeycloakSyncJob {
         tracing::debug!("Found {} users to sync", users.len());
 
         for user in users {
-            match self.sync_user(&user.user_id, &user.keycloak_id, &user.role, user.is_active).await {
+            match self
+                .sync_user(&user.user_id, &user.keycloak_id, &user.role, user.is_active)
+                .await
+            {
                 Ok(true) => result.synced += 1,
                 Ok(false) => result.skipped += 1,
                 Err(e) => {
@@ -100,14 +103,16 @@ impl KeycloakSyncJob {
                         e
                     );
                     result.failed += 1;
-                    
+
                     // Log sync failure
-                    let _ = self.log_sync_failure(
-                        &user.user_id,
-                        &user.keycloak_id,
-                        SYNC_ACTION_UPDATE,
-                        &e.to_string(),
-                    ).await;
+                    let _ = self
+                        .log_sync_failure(
+                            &user.user_id,
+                            &user.keycloak_id,
+                            SYNC_ACTION_UPDATE,
+                            &e.to_string(),
+                        )
+                        .await;
                 }
             }
         }
@@ -132,7 +137,7 @@ impl KeycloakSyncJob {
                     "User {} not found in Keycloak, marking as inactive",
                     keycloak_id
                 );
-                
+
                 // Mark user as inactive in database
                 sqlx::query!(
                     r#"
@@ -233,7 +238,7 @@ impl KeycloakSyncJob {
         details: &str,
     ) -> AppResult<()> {
         let now = Utc::now().naive_utc();
-        
+
         sqlx::query!(
             r#"
             INSERT INTO keycloak_sync_log (
@@ -263,7 +268,7 @@ impl KeycloakSyncJob {
         error_message: &str,
     ) -> AppResult<()> {
         let now = Utc::now().naive_utc();
-        
+
         sqlx::query!(
             r#"
             INSERT INTO keycloak_sync_log (
@@ -332,7 +337,9 @@ impl KeycloakSyncJob {
             success: row.success,
             failed: row.failed,
             skipped: row.skipped,
-            last_sync_at: row.last_sync_at.map(|dt| chrono::DateTime::from_naive_utc_and_offset(dt, Utc)),
+            last_sync_at: row
+                .last_sync_at
+                .map(|dt| chrono::DateTime::from_naive_utc_and_offset(dt, Utc)),
         })
     }
 

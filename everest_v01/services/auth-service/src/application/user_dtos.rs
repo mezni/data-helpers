@@ -47,8 +47,6 @@ impl From<User> for UserResponse {
     }
 }
 
-
-
 /// Create internal user request
 #[derive(Debug, Clone, Serialize, Deserialize, Validate, ToSchema)]
 pub struct CreateInternalUserRequest {

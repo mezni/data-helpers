@@ -226,36 +226,36 @@ impl UserCommands {
         self.user_repo.update(&user).await?;
 
         // Sync with Keycloak
-// Sync with Keycloak
-if let Err(e) = self
-    .keycloak_client
-    .update_user(
-        &user.keycloak_id,
-        email.as_ref().map(|e| e.clone().into()), // Use as_ref() to borrow
-        username.as_ref().map(|u| u.as_str().to_string()), // Use as_ref() to borrow
-        request.first_name,
-        request.last_name,
-        Some(user.is_active),
-    )
-    .await
-{
-    tracing::warn!("Failed to update user in Keycloak: {}", e);
-}
+        // Sync with Keycloak
+        if let Err(e) = self
+            .keycloak_client
+            .update_user(
+                &user.keycloak_id,
+                email.as_ref().map(|e| e.clone().into()), // Use as_ref() to borrow
+                username.as_ref().map(|u| u.as_str().to_string()), // Use as_ref() to borrow
+                request.first_name,
+                request.last_name,
+                Some(user.is_active),
+            )
+            .await
+        {
+            tracing::warn!("Failed to update user in Keycloak: {}", e);
+        }
 
         // Update role in Keycloak if changed
-if role.as_str() != old_role {
-    if let Err(e) = self
-        .keycloak_client
-        .assign_role(&user.keycloak_id, role.as_str())
-        .await
-    {
-        tracing::warn!("Failed to update role in Keycloak: {}", e);
-    }
+        if role.as_str() != old_role {
+            if let Err(e) = self
+                .keycloak_client
+                .assign_role(&user.keycloak_id, role.as_str())
+                .await
+            {
+                tracing::warn!("Failed to update role in Keycloak: {}", e);
+            }
 
-    self.audit_repo
-        .log_role_change(&user_id, &old_role, role.as_str(), &updated_by)
-        .await?;
-}
+            self.audit_repo
+                .log_role_change(&user_id, &old_role, role.as_str(), &updated_by)
+                .await?;
+        }
 
         // Audit log
         let mut changes = Vec::new();
@@ -265,9 +265,9 @@ if role.as_str() != old_role {
         if username.is_some() {
             changes.push("username".to_string());
         }
-if role.as_str() != old_role {
-    changes.push("role".to_string());
-}
+        if role.as_str() != old_role {
+            changes.push("role".to_string());
+        }
 
         self.audit_repo
             .log_user_update(

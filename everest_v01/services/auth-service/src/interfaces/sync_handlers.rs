@@ -1,7 +1,7 @@
 // src/interfaces/sync_handlers.rs
-use crate::core::{extract_claims, AppError};
+use crate::core::{AppError, extract_claims};
 use crate::jobs::KeycloakSyncJob;
-use actix_web::{get, post, web, HttpRequest, HttpResponse, Responder};
+use actix_web::{HttpRequest, HttpResponse, Responder, get, post, web};
 use serde::{Deserialize, Serialize};
 use utoipa::ToSchema;
 
