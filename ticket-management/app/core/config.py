@@ -1,19 +1,19 @@
+from functools import lru_cache
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
     app_name: str = "Ticket Management API"
     app_version: str = "1.0.0"
-    environment: str = "development"
+    app_env: str = "development"
+    debug: bool = True
 
-    mongodb_url: str = "mongodb://localhost:27017"
+    mongodb_uri: str = "mongodb://localhost:27017"
     mongodb_database: str = "ticket_management"
 
-    jwt_secret_key: str = "change-me"
-    jwt_algorithm: str = "HS256"
-    jwt_access_token_expire_seconds: int = 3600
-
-    max_upload_size: int = 10 * 1024 * 1024
+    api_host: str = "0.0.0.0"
+    api_port: int = 8000
 
     model_config = SettingsConfigDict(
         env_file=".env",
@@ -23,4 +23,9 @@ class Settings(BaseSettings):
     )
 
 
-settings = Settings()
+@lru_cache
+def get_settings() -> Settings:
+    return Settings()
+
+
+settings = get_settings()
