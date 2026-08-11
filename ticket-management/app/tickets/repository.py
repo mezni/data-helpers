@@ -1,0 +1,1 @@
+"""Ticket persistence operations."""
