@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+
+# Generated data
+data/
+
+# Local environment variables/secrets (if applicable)
+.env
+
+# Log files
+*.log
