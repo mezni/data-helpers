@@ -7,7 +7,9 @@ authors = [
     { name = "M.Mezni", email = "mamezni@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "faker>=40.38.0",
+]
 
 [project.scripts]
 omni-connect = "omni_connect:main"

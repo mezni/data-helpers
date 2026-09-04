@@ -1,9 +1,43 @@
+# Virtual environments
 .venv/
-__pycache__/
-*.pyc
+venv/
+env/
+ENV/
 
-# Local environment variables/secrets (if applicable)
+# Python bytecode & build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Tooling / test caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.uv_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.ipynb_checkpoints/
+
+# Local environment variables/secrets
 .env
+.env.*
+!.env.example
+
+# Streamlit secrets
+.streamlit/secrets.toml
 
 # Log files
 *.log
+
+# OS & editor files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
