@@ -1,0 +1,1382 @@
+[
+  {
+    "billing_account_id": "BILL-915552",
+    "customer_id": "CUST-939042",
+    "device_id": "DEV-1005",
+    "currency": "USD",
+    "current_balance": 0.0,
+    "autopay_enabled": true,
+    "payment_methods": [
+      {
+        "payment_method_id": "PM-584196",
+        "type": "CREDIT_CARD",
+        "last_four": "1449",
+        "is_default": true
+      }
+    ],
+    "invoices": [
+      {
+        "invoice_id": "INV-91490600",
+        "customer_id": "CUST-939042",
+        "billing_account_id": "BILL-915552",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-04-22T21:01:04.632529+00:00",
+        "due_date": "2026-05-07T21:01:04.632529+00:00",
+        "total_amount": 66.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-43888120",
+        "customer_id": "CUST-939042",
+        "billing_account_id": "BILL-915552",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-04-22T21:01:04.632529+00:00",
+        "due_date": "2026-05-07T21:01:04.632529+00:00",
+        "total_amount": 66.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-73183160",
+        "customer_id": "CUST-939042",
+        "billing_account_id": "BILL-915552",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-05-07T21:01:04.632543+00:00",
+        "due_date": "2026-05-22T21:01:04.632543+00:00",
+        "total_amount": 66.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-25680918",
+        "customer_id": "CUST-939042",
+        "billing_account_id": "BILL-915552",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-06-06T21:01:04.632543+00:00",
+        "due_date": "2026-06-21T21:01:04.632543+00:00",
+        "total_amount": 66.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-28562943",
+        "customer_id": "CUST-939042",
+        "billing_account_id": "BILL-915552",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-07-06T21:01:04.632543+00:00",
+        "due_date": "2026-07-21T21:01:04.632543+00:00",
+        "total_amount": 66.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-26165228",
+        "customer_id": "CUST-939042",
+        "billing_account_id": "BILL-915552",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-08-05T21:01:04.632543+00:00",
+        "due_date": "2026-08-20T21:01:04.632543+00:00",
+        "total_amount": 66.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "billing_account_id": "BILL-145294",
+    "customer_id": "CUST-365029",
+    "device_id": "DEV-1004",
+    "currency": "USD",
+    "current_balance": 0.0,
+    "autopay_enabled": true,
+    "payment_methods": [
+      {
+        "payment_method_id": "PM-971287",
+        "type": "CREDIT_CARD",
+        "last_four": "7914",
+        "is_default": true
+      }
+    ],
+    "invoices": [
+      {
+        "invoice_id": "INV-92842937",
+        "customer_id": "CUST-365029",
+        "billing_account_id": "BILL-145294",
+        "plan_id": "PLAN-003",
+        "issue_date": "2026-05-19T21:01:04.644476+00:00",
+        "due_date": "2026-06-03T21:01:04.644476+00:00",
+        "total_amount": 88.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Premium — Monthly Rate Plan",
+            "amount": 80.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 8.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-91533994",
+        "customer_id": "CUST-365029",
+        "billing_account_id": "BILL-145294",
+        "plan_id": "PLAN-003",
+        "issue_date": "2026-05-19T21:01:04.644476+00:00",
+        "due_date": "2026-06-03T21:01:04.644476+00:00",
+        "total_amount": 88.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Premium — Monthly Rate Plan",
+            "amount": 80.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 8.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-26329893",
+        "customer_id": "CUST-365029",
+        "billing_account_id": "BILL-145294",
+        "plan_id": "PLAN-003",
+        "issue_date": "2026-05-19T21:01:04.644476+00:00",
+        "due_date": "2026-06-03T21:01:04.644476+00:00",
+        "total_amount": 88.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Premium — Monthly Rate Plan",
+            "amount": 80.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 8.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-38929606",
+        "customer_id": "CUST-365029",
+        "billing_account_id": "BILL-145294",
+        "plan_id": "PLAN-003",
+        "issue_date": "2026-06-06T21:01:04.644489+00:00",
+        "due_date": "2026-06-21T21:01:04.644489+00:00",
+        "total_amount": 88.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Premium — Monthly Rate Plan",
+            "amount": 80.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 8.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-95535089",
+        "customer_id": "CUST-365029",
+        "billing_account_id": "BILL-145294",
+        "plan_id": "PLAN-003",
+        "issue_date": "2026-07-06T21:01:04.644489+00:00",
+        "due_date": "2026-07-21T21:01:04.644489+00:00",
+        "total_amount": 88.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Premium — Monthly Rate Plan",
+            "amount": 80.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 8.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-92006967",
+        "customer_id": "CUST-365029",
+        "billing_account_id": "BILL-145294",
+        "plan_id": "PLAN-003",
+        "issue_date": "2026-08-05T21:01:04.644489+00:00",
+        "due_date": "2026-08-20T21:01:04.644489+00:00",
+        "total_amount": 88.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Premium — Monthly Rate Plan",
+            "amount": 80.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 8.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "billing_account_id": "BILL-708411",
+    "customer_id": "CUST-718907",
+    "device_id": "DEV-1003",
+    "currency": "USD",
+    "current_balance": 0.0,
+    "autopay_enabled": true,
+    "payment_methods": [
+      {
+        "payment_method_id": "PM-125014",
+        "type": "CREDIT_CARD",
+        "last_four": "1387",
+        "is_default": true
+      }
+    ],
+    "invoices": [
+      {
+        "invoice_id": "INV-46832012",
+        "customer_id": "CUST-718907",
+        "billing_account_id": "BILL-708411",
+        "plan_id": "PLAN-005",
+        "issue_date": "2026-08-27T21:01:04.652361+00:00",
+        "due_date": "2026-09-11T21:01:04.652361+00:00",
+        "total_amount": 99.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Unlimited — Monthly Rate Plan",
+            "amount": 90.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 9.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-11713926",
+        "customer_id": "CUST-718907",
+        "billing_account_id": "BILL-708411",
+        "plan_id": "PLAN-005",
+        "issue_date": "2026-08-27T21:01:04.652361+00:00",
+        "due_date": "2026-09-11T21:01:04.652361+00:00",
+        "total_amount": 99.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Unlimited — Monthly Rate Plan",
+            "amount": 90.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 9.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-35375359",
+        "customer_id": "CUST-718907",
+        "billing_account_id": "BILL-708411",
+        "plan_id": "PLAN-005",
+        "issue_date": "2026-08-27T21:01:04.652361+00:00",
+        "due_date": "2026-09-11T21:01:04.652361+00:00",
+        "total_amount": 99.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Unlimited — Monthly Rate Plan",
+            "amount": 90.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 9.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-73691477",
+        "customer_id": "CUST-718907",
+        "billing_account_id": "BILL-708411",
+        "plan_id": "PLAN-005",
+        "issue_date": "2026-08-27T21:01:04.652361+00:00",
+        "due_date": "2026-09-11T21:01:04.652361+00:00",
+        "total_amount": 99.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Unlimited — Monthly Rate Plan",
+            "amount": 90.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 9.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-76918941",
+        "customer_id": "CUST-718907",
+        "billing_account_id": "BILL-708411",
+        "plan_id": "PLAN-005",
+        "issue_date": "2026-08-27T21:01:04.652361+00:00",
+        "due_date": "2026-09-11T21:01:04.652361+00:00",
+        "total_amount": 99.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Unlimited — Monthly Rate Plan",
+            "amount": 90.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 9.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-68135933",
+        "customer_id": "CUST-718907",
+        "billing_account_id": "BILL-708411",
+        "plan_id": "PLAN-005",
+        "issue_date": "2026-08-27T21:01:04.652361+00:00",
+        "due_date": "2026-09-11T21:01:04.652361+00:00",
+        "total_amount": 99.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Unlimited — Monthly Rate Plan",
+            "amount": 90.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 9.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "billing_account_id": "BILL-686986",
+    "customer_id": "CUST-693645",
+    "device_id": "DEV-1005",
+    "currency": "USD",
+    "current_balance": 0.0,
+    "autopay_enabled": true,
+    "payment_methods": [
+      {
+        "payment_method_id": "PM-420413",
+        "type": "DEBIT_CARD",
+        "last_four": "4838",
+        "is_default": true
+      }
+    ],
+    "invoices": [
+      {
+        "invoice_id": "INV-34636837",
+        "customer_id": "CUST-693645",
+        "billing_account_id": "BILL-686986",
+        "plan_id": "PLAN-005",
+        "issue_date": "2026-03-08T21:01:04.659169+00:00",
+        "due_date": "2026-03-23T21:01:04.659169+00:00",
+        "total_amount": 99.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Unlimited — Monthly Rate Plan",
+            "amount": 90.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 9.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-67036909",
+        "customer_id": "CUST-693645",
+        "billing_account_id": "BILL-686986",
+        "plan_id": "PLAN-005",
+        "issue_date": "2026-04-07T21:01:04.659169+00:00",
+        "due_date": "2026-04-22T21:01:04.659169+00:00",
+        "total_amount": 99.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Unlimited — Monthly Rate Plan",
+            "amount": 90.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 9.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-25821675",
+        "customer_id": "CUST-693645",
+        "billing_account_id": "BILL-686986",
+        "plan_id": "PLAN-005",
+        "issue_date": "2026-05-07T21:01:04.659169+00:00",
+        "due_date": "2026-05-22T21:01:04.659169+00:00",
+        "total_amount": 99.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Unlimited — Monthly Rate Plan",
+            "amount": 90.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 9.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-14071329",
+        "customer_id": "CUST-693645",
+        "billing_account_id": "BILL-686986",
+        "plan_id": "PLAN-005",
+        "issue_date": "2026-06-06T21:01:04.659169+00:00",
+        "due_date": "2026-06-21T21:01:04.659169+00:00",
+        "total_amount": 99.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Unlimited — Monthly Rate Plan",
+            "amount": 90.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 9.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-65189178",
+        "customer_id": "CUST-693645",
+        "billing_account_id": "BILL-686986",
+        "plan_id": "PLAN-005",
+        "issue_date": "2026-07-06T21:01:04.659169+00:00",
+        "due_date": "2026-07-21T21:01:04.659169+00:00",
+        "total_amount": 99.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Unlimited — Monthly Rate Plan",
+            "amount": 90.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 9.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-58180433",
+        "customer_id": "CUST-693645",
+        "billing_account_id": "BILL-686986",
+        "plan_id": "PLAN-005",
+        "issue_date": "2026-08-05T21:01:04.659169+00:00",
+        "due_date": "2026-08-20T21:01:04.659169+00:00",
+        "total_amount": 99.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Unlimited — Monthly Rate Plan",
+            "amount": 90.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 9.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "billing_account_id": "BILL-526322",
+    "customer_id": "CUST-575307",
+    "device_id": "DEV-1001",
+    "currency": "USD",
+    "current_balance": 44.0,
+    "autopay_enabled": true,
+    "payment_methods": [
+      {
+        "payment_method_id": "PM-398769",
+        "type": "ACH",
+        "last_four": "4534",
+        "is_default": true
+      }
+    ],
+    "invoices": [
+      {
+        "invoice_id": "INV-86403987",
+        "customer_id": "CUST-575307",
+        "billing_account_id": "BILL-526322",
+        "plan_id": "PLAN-001",
+        "issue_date": "2026-06-11T21:01:04.666800+00:00",
+        "due_date": "2026-06-26T21:01:04.666800+00:00",
+        "total_amount": 44.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Essential — Monthly Rate Plan",
+            "amount": 40.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 4.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-95946606",
+        "customer_id": "CUST-575307",
+        "billing_account_id": "BILL-526322",
+        "plan_id": "PLAN-001",
+        "issue_date": "2026-06-11T21:01:04.666800+00:00",
+        "due_date": "2026-06-26T21:01:04.666800+00:00",
+        "total_amount": 44.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Essential — Monthly Rate Plan",
+            "amount": 40.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 4.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-88124090",
+        "customer_id": "CUST-575307",
+        "billing_account_id": "BILL-526322",
+        "plan_id": "PLAN-001",
+        "issue_date": "2026-06-11T21:01:04.666800+00:00",
+        "due_date": "2026-06-26T21:01:04.666800+00:00",
+        "total_amount": 44.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Essential — Monthly Rate Plan",
+            "amount": 40.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 4.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-16190641",
+        "customer_id": "CUST-575307",
+        "billing_account_id": "BILL-526322",
+        "plan_id": "PLAN-001",
+        "issue_date": "2026-06-11T21:01:04.666800+00:00",
+        "due_date": "2026-06-26T21:01:04.666800+00:00",
+        "total_amount": 44.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Essential — Monthly Rate Plan",
+            "amount": 40.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 4.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-41863608",
+        "customer_id": "CUST-575307",
+        "billing_account_id": "BILL-526322",
+        "plan_id": "PLAN-001",
+        "issue_date": "2026-07-06T21:01:04.666812+00:00",
+        "due_date": "2026-07-21T21:01:04.666812+00:00",
+        "total_amount": 44.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Essential — Monthly Rate Plan",
+            "amount": 40.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 4.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-48581882",
+        "customer_id": "CUST-575307",
+        "billing_account_id": "BILL-526322",
+        "plan_id": "PLAN-001",
+        "issue_date": "2026-08-05T21:01:04.666812+00:00",
+        "due_date": "2026-08-20T21:01:04.666812+00:00",
+        "total_amount": 44.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Essential — Monthly Rate Plan",
+            "amount": 40.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 4.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "billing_account_id": "BILL-446892",
+    "customer_id": "CUST-276508",
+    "device_id": "DEV-1005",
+    "currency": "USD",
+    "current_balance": 132.0,
+    "autopay_enabled": true,
+    "payment_methods": [
+      {
+        "payment_method_id": "PM-654844",
+        "type": "DEBIT_CARD",
+        "last_four": "6946",
+        "is_default": true
+      }
+    ],
+    "invoices": [
+      {
+        "invoice_id": "INV-71612780",
+        "customer_id": "CUST-276508",
+        "billing_account_id": "BILL-446892",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-03-08T21:01:04.671249+00:00",
+        "due_date": "2026-03-23T21:01:04.671249+00:00",
+        "total_amount": 132.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-21364144",
+        "customer_id": "CUST-276508",
+        "billing_account_id": "BILL-446892",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-04-07T21:01:04.671249+00:00",
+        "due_date": "2026-04-22T21:01:04.671249+00:00",
+        "total_amount": 132.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-47211135",
+        "customer_id": "CUST-276508",
+        "billing_account_id": "BILL-446892",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-05-07T21:01:04.671249+00:00",
+        "due_date": "2026-05-22T21:01:04.671249+00:00",
+        "total_amount": 132.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-47817878",
+        "customer_id": "CUST-276508",
+        "billing_account_id": "BILL-446892",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-06-06T21:01:04.671249+00:00",
+        "due_date": "2026-06-21T21:01:04.671249+00:00",
+        "total_amount": 132.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-90938348",
+        "customer_id": "CUST-276508",
+        "billing_account_id": "BILL-446892",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-07-06T21:01:04.671249+00:00",
+        "due_date": "2026-07-21T21:01:04.671249+00:00",
+        "total_amount": 132.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-98228819",
+        "customer_id": "CUST-276508",
+        "billing_account_id": "BILL-446892",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-08-05T21:01:04.671249+00:00",
+        "due_date": "2026-08-20T21:01:04.671249+00:00",
+        "total_amount": 132.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "billing_account_id": "BILL-398660",
+    "customer_id": "CUST-319374",
+    "device_id": "DEV-1003",
+    "currency": "USD",
+    "current_balance": 0.0,
+    "autopay_enabled": true,
+    "payment_methods": [
+      {
+        "payment_method_id": "PM-796604",
+        "type": "CREDIT_CARD",
+        "last_four": "6420",
+        "is_default": true
+      }
+    ],
+    "invoices": [
+      {
+        "invoice_id": "INV-69901798",
+        "customer_id": "CUST-319374",
+        "billing_account_id": "BILL-398660",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-04-12T21:01:04.678849+00:00",
+        "due_date": "2026-04-27T21:01:04.678849+00:00",
+        "total_amount": 66.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-72773342",
+        "customer_id": "CUST-319374",
+        "billing_account_id": "BILL-398660",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-04-12T21:01:04.678849+00:00",
+        "due_date": "2026-04-27T21:01:04.678849+00:00",
+        "total_amount": 66.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-51335793",
+        "customer_id": "CUST-319374",
+        "billing_account_id": "BILL-398660",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-05-07T21:01:04.678860+00:00",
+        "due_date": "2026-05-22T21:01:04.678860+00:00",
+        "total_amount": 66.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-79784597",
+        "customer_id": "CUST-319374",
+        "billing_account_id": "BILL-398660",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-06-06T21:01:04.678860+00:00",
+        "due_date": "2026-06-21T21:01:04.678860+00:00",
+        "total_amount": 66.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-11007831",
+        "customer_id": "CUST-319374",
+        "billing_account_id": "BILL-398660",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-07-06T21:01:04.678860+00:00",
+        "due_date": "2026-07-21T21:01:04.678860+00:00",
+        "total_amount": 66.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-50667748",
+        "customer_id": "CUST-319374",
+        "billing_account_id": "BILL-398660",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-08-05T21:01:04.678860+00:00",
+        "due_date": "2026-08-20T21:01:04.678860+00:00",
+        "total_amount": 66.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "billing_account_id": "BILL-401432",
+    "customer_id": "CUST-285821",
+    "device_id": "DEV-1004",
+    "currency": "USD",
+    "current_balance": 0.0,
+    "autopay_enabled": false,
+    "payment_methods": [
+      {
+        "payment_method_id": "PM-198205",
+        "type": "DEBIT_CARD",
+        "last_four": "5990",
+        "is_default": true
+      }
+    ],
+    "invoices": [
+      {
+        "invoice_id": "INV-13799611",
+        "customer_id": "CUST-285821",
+        "billing_account_id": "BILL-401432",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-03-08T21:01:04.686362+00:00",
+        "due_date": "2026-03-23T21:01:04.686362+00:00",
+        "total_amount": 132.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-27992382",
+        "customer_id": "CUST-285821",
+        "billing_account_id": "BILL-401432",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-04-07T21:01:04.686362+00:00",
+        "due_date": "2026-04-22T21:01:04.686362+00:00",
+        "total_amount": 132.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-22069710",
+        "customer_id": "CUST-285821",
+        "billing_account_id": "BILL-401432",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-05-07T21:01:04.686362+00:00",
+        "due_date": "2026-05-22T21:01:04.686362+00:00",
+        "total_amount": 132.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-96133336",
+        "customer_id": "CUST-285821",
+        "billing_account_id": "BILL-401432",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-06-06T21:01:04.686362+00:00",
+        "due_date": "2026-06-21T21:01:04.686362+00:00",
+        "total_amount": 132.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-67241336",
+        "customer_id": "CUST-285821",
+        "billing_account_id": "BILL-401432",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-07-06T21:01:04.686362+00:00",
+        "due_date": "2026-07-21T21:01:04.686362+00:00",
+        "total_amount": 132.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-99143494",
+        "customer_id": "CUST-285821",
+        "billing_account_id": "BILL-401432",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-08-05T21:01:04.686362+00:00",
+        "due_date": "2026-08-20T21:01:04.686362+00:00",
+        "total_amount": 132.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "billing_account_id": "BILL-761991",
+    "customer_id": "CUST-260702",
+    "device_id": "DEV-1004",
+    "currency": "USD",
+    "current_balance": 0.0,
+    "autopay_enabled": true,
+    "payment_methods": [
+      {
+        "payment_method_id": "PM-256486",
+        "type": "ACH",
+        "last_four": "3127",
+        "is_default": true
+      }
+    ],
+    "invoices": [
+      {
+        "invoice_id": "INV-26288006",
+        "customer_id": "CUST-260702",
+        "billing_account_id": "BILL-761991",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-03-08T21:01:04.694094+00:00",
+        "due_date": "2026-03-23T21:01:04.694094+00:00",
+        "total_amount": 132.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-19464796",
+        "customer_id": "CUST-260702",
+        "billing_account_id": "BILL-761991",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-04-07T21:01:04.694094+00:00",
+        "due_date": "2026-04-22T21:01:04.694094+00:00",
+        "total_amount": 132.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-79158616",
+        "customer_id": "CUST-260702",
+        "billing_account_id": "BILL-761991",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-05-07T21:01:04.694094+00:00",
+        "due_date": "2026-05-22T21:01:04.694094+00:00",
+        "total_amount": 132.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-35450193",
+        "customer_id": "CUST-260702",
+        "billing_account_id": "BILL-761991",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-06-06T21:01:04.694094+00:00",
+        "due_date": "2026-06-21T21:01:04.694094+00:00",
+        "total_amount": 132.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-87928698",
+        "customer_id": "CUST-260702",
+        "billing_account_id": "BILL-761991",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-07-06T21:01:04.694094+00:00",
+        "due_date": "2026-07-21T21:01:04.694094+00:00",
+        "total_amount": 132.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-78049350",
+        "customer_id": "CUST-260702",
+        "billing_account_id": "BILL-761991",
+        "plan_id": "PLAN-004",
+        "issue_date": "2026-08-05T21:01:04.694094+00:00",
+        "due_date": "2026-08-20T21:01:04.694094+00:00",
+        "total_amount": 132.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Family — Monthly Rate Plan",
+            "amount": 120.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 12.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "billing_account_id": "BILL-606294",
+    "customer_id": "CUST-861521",
+    "device_id": "DEV-1003",
+    "currency": "USD",
+    "current_balance": 66.0,
+    "autopay_enabled": true,
+    "payment_methods": [
+      {
+        "payment_method_id": "PM-989698",
+        "type": "ACH",
+        "last_four": "7125",
+        "is_default": true
+      }
+    ],
+    "invoices": [
+      {
+        "invoice_id": "INV-79361208",
+        "customer_id": "CUST-861521",
+        "billing_account_id": "BILL-606294",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-05-18T21:01:04.702997+00:00",
+        "due_date": "2026-06-02T21:01:04.702997+00:00",
+        "total_amount": 66.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-47041024",
+        "customer_id": "CUST-861521",
+        "billing_account_id": "BILL-606294",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-05-18T21:01:04.702997+00:00",
+        "due_date": "2026-06-02T21:01:04.702997+00:00",
+        "total_amount": 66.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-54775732",
+        "customer_id": "CUST-861521",
+        "billing_account_id": "BILL-606294",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-05-18T21:01:04.702997+00:00",
+        "due_date": "2026-06-02T21:01:04.702997+00:00",
+        "total_amount": 66.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-75337953",
+        "customer_id": "CUST-861521",
+        "billing_account_id": "BILL-606294",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-06-06T21:01:04.703009+00:00",
+        "due_date": "2026-06-21T21:01:04.703009+00:00",
+        "total_amount": 66.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-43902707",
+        "customer_id": "CUST-861521",
+        "billing_account_id": "BILL-606294",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-07-06T21:01:04.703009+00:00",
+        "due_date": "2026-07-21T21:01:04.703009+00:00",
+        "total_amount": 66.0,
+        "status": "PAID",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      },
+      {
+        "invoice_id": "INV-66063898",
+        "customer_id": "CUST-861521",
+        "billing_account_id": "BILL-606294",
+        "plan_id": "PLAN-002",
+        "issue_date": "2026-08-05T21:01:04.703009+00:00",
+        "due_date": "2026-08-20T21:01:04.703009+00:00",
+        "total_amount": 66.0,
+        "status": "OVERDUE",
+        "line_items": [
+          {
+            "description": "Standard — Monthly Rate Plan",
+            "amount": 60.0
+          },
+          {
+            "description": "Regulatory Taxes & Fees",
+            "amount": 6.0
+          }
+        ]
+      }
+    ]
+  }
+]

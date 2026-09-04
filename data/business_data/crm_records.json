@@ -1,0 +1,191 @@
+[
+  {
+    "customer_id": "CUST-939042",
+    "billing_account_id": "BILL-915552",
+    "current_plan_id": "PLAN-002",
+    "eligible_promotion_ids": [
+      "PROMO-0001",
+      "PROMO-0003"
+    ],
+    "contact": {
+      "first_name": "Anthony",
+      "last_name": "Russell",
+      "email": "erin52@example.net",
+      "phone": "505.226.4719x71892",
+      "company": "Robinson, Fitzgerald and Rodriguez"
+    },
+    "account_status": "Prospect",
+    "lifetime_value": 396.0,
+    "created_at": "2026-04-21T21:01:04.632529+00:00"
+  },
+  {
+    "customer_id": "CUST-365029",
+    "billing_account_id": "BILL-145294",
+    "current_plan_id": "PLAN-003",
+    "eligible_promotion_ids": [
+      "PROMO-0001",
+      "PROMO-0003"
+    ],
+    "contact": {
+      "first_name": "Rachel",
+      "last_name": "Rios",
+      "email": "shannonwilliams@example.com",
+      "phone": "+1-855-300-9657x107",
+      "company": "Lucas-Wang"
+    },
+    "account_status": "Prospect",
+    "lifetime_value": 528.0,
+    "created_at": "2026-05-18T21:01:04.644476+00:00"
+  },
+  {
+    "customer_id": "CUST-718907",
+    "billing_account_id": "BILL-708411",
+    "current_plan_id": "PLAN-005",
+    "eligible_promotion_ids": [
+      "PROMO-0001",
+      "PROMO-0002"
+    ],
+    "contact": {
+      "first_name": "Kevin",
+      "last_name": "Bradley",
+      "email": "blewis@example.net",
+      "phone": "+1-707-493-9738x24962",
+      "company": "Stewart Inc"
+    },
+    "account_status": "Active",
+    "lifetime_value": 594.0,
+    "created_at": "2026-08-26T21:01:04.652361+00:00"
+  },
+  {
+    "customer_id": "CUST-693645",
+    "billing_account_id": "BILL-686986",
+    "current_plan_id": "PLAN-005",
+    "eligible_promotion_ids": [
+      "PROMO-0001",
+      "PROMO-0003"
+    ],
+    "contact": {
+      "first_name": "Mark",
+      "last_name": "Smith",
+      "email": "castillolisa@example.org",
+      "phone": "001-421-533-5309",
+      "company": "Sweeney LLC"
+    },
+    "account_status": "Prospect",
+    "lifetime_value": 594.0,
+    "created_at": "2026-03-03T21:01:04.659156+00:00"
+  },
+  {
+    "customer_id": "CUST-575307",
+    "billing_account_id": "BILL-526322",
+    "current_plan_id": "PLAN-001",
+    "eligible_promotion_ids": [
+      "PROMO-0005"
+    ],
+    "contact": {
+      "first_name": "Audrey",
+      "last_name": "Allen",
+      "email": "rhonda69@example.com",
+      "phone": "+1-893-890-8803x89189",
+      "company": "Atkinson Inc"
+    },
+    "account_status": "Delinquent",
+    "lifetime_value": 264.0,
+    "created_at": "2026-06-10T21:01:04.666800+00:00"
+  },
+  {
+    "customer_id": "CUST-276508",
+    "billing_account_id": "BILL-446892",
+    "current_plan_id": "PLAN-004",
+    "eligible_promotion_ids": [
+      "PROMO-0001",
+      "PROMO-0002"
+    ],
+    "contact": {
+      "first_name": "Amanda",
+      "last_name": "Lopez",
+      "email": "bauermarvin@example.org",
+      "phone": "001-459-400-0037",
+      "company": "Flores Inc"
+    },
+    "account_status": "Active",
+    "lifetime_value": 792.0,
+    "created_at": "2025-11-22T21:01:04.671239+00:00"
+  },
+  {
+    "customer_id": "CUST-319374",
+    "billing_account_id": "BILL-398660",
+    "current_plan_id": "PLAN-002",
+    "eligible_promotion_ids": [
+      "PROMO-0001",
+      "PROMO-0002"
+    ],
+    "contact": {
+      "first_name": "Linda",
+      "last_name": "Lee",
+      "email": "randy44@example.com",
+      "phone": "+1-802-587-6860x02281",
+      "company": "Schneider and Sons"
+    },
+    "account_status": "Active",
+    "lifetime_value": 396.0,
+    "created_at": "2026-04-11T21:01:04.678849+00:00"
+  },
+  {
+    "customer_id": "CUST-285821",
+    "billing_account_id": "BILL-401432",
+    "current_plan_id": "PLAN-004",
+    "eligible_promotion_ids": [
+      "PROMO-0001",
+      "PROMO-0002"
+    ],
+    "contact": {
+      "first_name": "Steven",
+      "last_name": "Moss",
+      "email": "edaniels@example.net",
+      "phone": "001-422-676-9869",
+      "company": "Miller-Robbins"
+    },
+    "account_status": "Active",
+    "lifetime_value": 792.0,
+    "created_at": "2026-03-05T21:01:04.686350+00:00"
+  },
+  {
+    "customer_id": "CUST-260702",
+    "billing_account_id": "BILL-761991",
+    "current_plan_id": "PLAN-004",
+    "eligible_promotion_ids": [
+      "PROMO-0001",
+      "PROMO-0002"
+    ],
+    "contact": {
+      "first_name": "Kevin",
+      "last_name": "Wise",
+      "email": "snowdebra@example.com",
+      "phone": "001-254-944-4661x18913",
+      "company": "Gentry-Lewis"
+    },
+    "account_status": "Active",
+    "lifetime_value": 792.0,
+    "created_at": "2026-03-03T21:01:04.694080+00:00"
+  },
+  {
+    "customer_id": "CUST-861521",
+    "billing_account_id": "BILL-606294",
+    "current_plan_id": "PLAN-002",
+    "eligible_promotion_ids": [
+      "PROMO-0001",
+      "PROMO-0003"
+    ],
+    "contact": {
+      "first_name": "Angela",
+      "last_name": "Velazquez",
+      "email": "taylormurphy@example.com",
+      "phone": "001-442-755-5248x3304",
+      "company": "Harrison, Rivera and Vaughan"
+    },
+    "account_status": "Prospect",
+    "lifetime_value": 396.0,
+    "created_at": "2026-05-17T21:01:04.702997+00:00"
+  }
+]

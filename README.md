@@ -35,16 +35,18 @@ See [docs/brief.md](docs/brief.md) for the full executive brief.
 
 ```
 omni-connect/
-├── data/                     # Generated synthetic datasets (JSON)
-│   ├── crm_records.json
-│   └── billing_records.json
+├── data/                             # Generated synthetic data
+│   ├── business_data/                # JSON datasets (CRM, billing, catalog, promos)
+│   └── knowledge_base/               # Markdown knowledge docs (policies, processes)
 ├── scripts/
-│   └── business_data_generator.py   # Generates synthetic CRM + billing data
+│   ├── business_data_generator.py    # Generates synthetic business JSON data
+│   └── knowledge_data_generator.py   # Generates markdown knowledge base
 ├── src/
 │   └── omni_connect/                # Application source
 │       └── __init__.py
 └── docs/
-    └── brief.md                     # Executive brief
+    ├── brief.md                     # Executive brief
+    └── architecture.md              # System architecture
 ```
 
 ## Getting Started
@@ -60,13 +62,14 @@ omni-connect/
 uv sync
 ```
 
-### Regenerate Synthetic Business Data
+### Regenerate Synthetic Data
 
-Generates `data/crm_records.json` and `data/billing_records.json` (linked CRM + billing pairs with 6 months of invoice history per customer).
+Generates JSON datasets under `data/business_data/` (linked CRM + billing pairs with 6 months of invoice history per customer, plus the product catalog and promotions) and the markdown knowledge base under `data/knowledge_base/`.
 
 ```bash
 cd scripts
 uv run python business_data_generator.py
+uv run python knowledge_data_generator.py
 ```
 
 ### Run
