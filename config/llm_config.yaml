@@ -2,14 +2,15 @@
 # Reused pattern from Bootcamp 3 (config/llm_config.yaml); extended with the RAG
 # retrieval pipeline for the omni-connect knowledge base (data/knowledge_base/).
 #
-# Provider: configured for OpenRouter (https://openrouter.ai), so a single key
-# can be issued instead of individual OpenAI keys. Requires LLM_BASE_URL=
-# https://openrouter.ai/api/v1 in .env. Model names use OpenRouter's
-# provider-namespaced format ("anthropic/claude-3.5-haiku").
+# Provider: configured for Anthropic via the anthropic SDK. To route through
+# OpenRouter (https://openrouter.ai), set LLM_BASE_URL=https://openrouter.ai/api/v1
+# in .env and use a key readable by src/llm (ANTHROPIC_API_KEY or
+# OPENROUTER_API_KEY). Model names use OpenRouter's provider-namespaced
+# format ("anthropic/claude-3.5-haiku").
 
 provider:
-  name: "openrouter"
-  api_type: "openai"
+  name: "anthropic"
+  api_type: "anthropic"
 
 models:
   # Primary chat LLM used for copilot rationale / conversational responses.
@@ -37,7 +38,7 @@ models:
     local: true
     device: "cpu"
 
-# LLM request behaviour - read by the LLM client and passed to the OpenAI SDK
+# LLM request behaviour - read by the LLM client and passed to the Anthropic SDK
 api:
   timeout: 30
   max_retries: 3
