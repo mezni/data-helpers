@@ -35,6 +35,9 @@ htmlcov/
 # Log files
 *.log
 
+# RAG pipeline build artifacts
+data/kb_store/
+
 # OS & editor files
 .DS_Store
 .idea/

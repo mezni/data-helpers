@@ -3,3 +3,7 @@ pydantic
 pydantic[email]
 streamlit
 dotenv
+sentence-transformers
+rank-bm25 
+torch
+faiss-cpu
