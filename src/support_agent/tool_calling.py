@@ -5,6 +5,9 @@ from support_agent.knowledge_base import search_knowledge_base
 from support_agent.llm_client import create_llm_client
 from dataclasses import dataclass, field
 from typing import Any
+import logging
+
+logger = logging.getLogger(__name__)
 
 MAX_TOOL_ROUNDS = 5
 
@@ -117,9 +120,11 @@ def execute_tool(name: str, raw_arguments: str) -> dict:
             or not arguments["order_id"].isdigit()
         ):
             return {"error": "invalid_tool_arguments"}
+
         try:
             return get_order_status(arguments["order_id"])
-        except (ValueError, KeyError):
+        except Exception:
+            logger.exception("Order status tool failed")
             return {"error": "tool_execution_failed"}
     if name == "search_knowledge_base":
         if (
@@ -129,10 +134,12 @@ def execute_tool(name: str, raw_arguments: str) -> dict:
             or len(arguments["query"]) > 500
         ):
             return {"error": "invalid_tool_arguments"}
+
         try:
             articles = search_knowledge_base(arguments["query"])
             return {"articles": articles}
-        except ValueError:
+        except Exception:
+            logger.exception("Knowledge search tool failed")
             return {"error": "tool_execution_failed"}
     return {"error": "unsupported_tool"}
 
@@ -163,7 +170,7 @@ def handle_message(
 
     client = create_llm_client()
 
-    for _ in range(MAX_TOOL_ROUNDS):
+    for round_number in range(MAX_TOOL_ROUNDS):
         response = client.chat.completions.create(
             model=model,
             messages=working_messages,
@@ -193,6 +200,14 @@ def handle_message(
         )
 
         for call in tool_calls:
+            logger.info(
+                "Executing agent tool",
+                extra={
+                    "tool_name": call.function.name,
+                    "round_number": round_number + 1,
+                },
+            )
+
             result = execute_tool(
                 call.function.name,
                 call.function.arguments,
@@ -206,7 +221,11 @@ def handle_message(
                 }
             )
 
-    raise RuntimeError("Maximum tool rounds exceeded.")
+    logger.warning(
+        "Agent exceeded maximum tool rounds",
+        extra={"max_tool_rounds": MAX_TOOL_ROUNDS},
+    )
+    raise RuntimeError("Agent exceeded the limit of maximum tool rounds.")
 
 
 def handle_ticket(ticket: str) -> str:
