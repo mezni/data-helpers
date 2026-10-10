@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.6] — Structured LLM Outputs
+- Enforced structured LLM outputs.
+
+## [0.0.5] — LLM Ticket Classification
+- Integrated LLM ticket classification.
+
 ## [0.0.4]
 - Edge cases, regression tests, and logging implemented.
 
@@ -27,3 +33,5 @@ Added sample datasets data/knowledge_base.json and data/tickets/tickets.json.
 | 0.0.2 | Business Logic | Implement the ticket classifier: extract category, order_id, and needs_order_lookup from unformatted ticket text. |
 | 0.0.3 | Data Contracts | Implement TicketInput/TicketOutput Pydantic schemas; integrate validation into the classifier; add schema tests and update classifier tests. |
 | 0.0.4 | Edge Cases, Regression Tests, and Logging | Edge cases, regression tests, and logging implemented. |
+| 0.0.5 | LLM Ticket Classification | Integrate LLM ticket classification. |
+| 0.0.6 | Structured LLM Outputs | Enforce structured LLM outputs. |

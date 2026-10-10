@@ -1,5 +1,3 @@
-
-import json
 import os
 
 from dotenv import load_dotenv
@@ -10,21 +8,19 @@ from support_agent.schemas import TicketInput, TicketOutput
 load_dotenv()
 
 SYSTEM_PROMPT = """
-You classify customer support tickets.
+Classify the customer support ticket.
 
-Choose exactly one category:
-- order_status: questions about delivery, shipping, tracking, or order status
-- refund: requests about refunds or getting money back
+Categories:
+- order_status: delivery, shipping, tracking, or order status
+- refund: refunds or requests for money back
 - general: everything else
 
-Extract an order ID only when it is explicitly present.
-Do not invent an order ID.
-Set needs_order_lookup to true only when:
-- category is order_status
-- an order ID is present
-
-Return only a JSON object with:
-category, order_id, needs_order_lookup.
+Rules:
+- Extract an order ID only if explicitly present.
+- Never invent an order ID.
+- Set needs_order_lookup to true only when the category is
+  order_status and an order ID is present.
+- Return data matching the provided schema.
 """.strip()
 
 
@@ -35,27 +31,26 @@ def classify_ticket(ticket: str) -> TicketOutput:
     model = os.getenv("OPENAI_MODEL")
 
     if not api_key or not model:
-        raise RuntimeError(
-            "Set OPENAI_API_KEY and OPENAI_MODEL in your environment."
-        )
+        raise RuntimeError("Set OPENAI_API_KEY and OPENAI_MODEL.")
 
     client = OpenAI(api_key=api_key)
 
-    response = client.chat.completions.create(
+    response = client.chat.completions.parse(
         model=model,
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": validated.message},
         ],
-        response_format={"type": "json_object"},
+        response_format=TicketOutput,
         temperature=0,
     )
 
-    content = response.choices[0].message.content
-    if not content:
-        raise ValueError("The model returned an empty response.")
+    message = response.choices[0].message
 
-    result = json.loads(content)
+    if message.refusal:
+        raise ValueError("The model refused to classify this ticket.")
 
-    # Validate the model's output against our application contract.
-    return TicketOutput.model_validate(result)
+    if message.parsed is None:
+        raise ValueError("The model returned no parsed result.")
+
+    return message.parsed
