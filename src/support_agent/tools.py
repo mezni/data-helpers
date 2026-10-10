@@ -1,11 +1,12 @@
-def get_order_status(order_id: str) -> dict:
-    if not order_id.isdigit():
-        raise ValueError(f"Invalid order ID: {order_id}")
+from support_agent.tool_calling import (
+    KNOWLEDGE_SEARCH_TOOL,
+    ORDER_STATUS_TOOL,
+    get_order_status,
+)
 
-    orders = {
-        "4821": {"status": "shipped", "estimated_delivery": "2026-10-12"},
-    }
+__all__ = ["KNOWLEDGE_SEARCH_TOOL", "ORDER_STATUS_TOOL", "TOOLS", "get_order_status"]
 
-    if order_id in orders:
-        return orders[order_id]
-    return {"status": "not_found"}
+TOOLS = [
+    ORDER_STATUS_TOOL,
+    KNOWLEDGE_SEARCH_TOOL,
+]

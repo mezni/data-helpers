@@ -3,7 +3,6 @@ from openai import APIConnectionError, APIStatusError, APITimeoutError
 from support_agent.llm_client import create_llm_client
 from support_agent.schemas import TicketInput, TicketOutput
 
-
 SYSTEM_PROMPT = """
 You classify customer support tickets.
 

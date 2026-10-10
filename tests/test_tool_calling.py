@@ -1,12 +1,9 @@
 
-from unittest.mock import patch
-
-from support_agent.tool_calling import execute_tool
-
-
+from unittest.mock import MagicMock, patch
 
 import pytest
-from unittest.mock import MagicMock, patch
+
+from support_agent.tool_calling import execute_tool
 
 
 @patch("support_agent.tool_calling.create_llm_client")
