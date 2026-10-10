@@ -1,10 +1,19 @@
-Problem to solve
-A support ticket arrives as plain text. Your program must classify it and return a structured result.
-Input:
-My order #4821 has not arrived.
+# Business logic
 
+### Problem Definition
 
-Expected output:
+When a customer submits a support ticket, the system must process the unformatted text, extract key entity information, and return a structured JSON payload for downstream services.
+
+---
+
+### Example Input
+> **Ticket Text:**  
+> *"My order #4821 has not arrived. Can you help?"*
+
+---
+
+### Expected Output
+```json
 {
   "category": "order_status",
   "order_id": "4821",
