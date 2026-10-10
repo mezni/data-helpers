@@ -9,7 +9,9 @@ class TicketInput(BaseModel):
     @field_validator("message", mode="before")
     @classmethod
     def strip_message(cls, v):
-        return v.strip()
+        if isinstance(v, str):
+            return v.strip()
+        return v
 
 
 class TicketOutput(BaseModel):
