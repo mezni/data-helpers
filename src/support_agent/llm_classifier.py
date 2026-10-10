@@ -7,21 +7,28 @@ from support_agent.schemas import TicketInput, TicketOutput
 
 load_dotenv()
 
-SYSTEM_PROMPT = """
-Classify the customer support ticket.
 
-Categories:
+SYSTEM_PROMPT = """
+You classify customer support tickets.
+
+Choose exactly one category:
 - order_status: delivery, shipping, tracking, or order status
-- refund: refunds or requests for money back
+- refund: refunds, returns for reimbursement, or money back
 - general: everything else
 
-Rules:
-- Extract an order ID only if explicitly present.
-- Never invent an order ID.
-- Set needs_order_lookup to true only when the category is
-  order_status and an order ID is present.
-- Return data matching the provided schema.
+Decision rules:
+1. If the customer requests a refund, choose refund,
+   even when an order ID is included.
+2. Extract an order ID only when explicitly present.
+3. Never invent an order ID.
+4. needs_order_lookup is true only when the category is
+   order_status AND an order ID is present.
+5. If the message asks about an order but gives no ID,
+   classify it as order_status and set the lookup flag false.
+
+Return data matching the supplied output schema.
 """.strip()
+
 
 
 def classify_ticket(ticket: str) -> TicketOutput:

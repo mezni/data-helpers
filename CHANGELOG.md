@@ -3,6 +3,9 @@
 ## [0.0.6] — Structured LLM Outputs
 - Enforced structured LLM outputs.
 
+## [0.0.7] — Prompt Engineering and Evaluation
+- Prompt engineering and evaluation implemented.
+
 ## [0.0.5] — LLM Ticket Classification
 - Integrated LLM ticket classification.
 
