@@ -1,4 +1,3 @@
-
 import pytest
 
 from support_agent.tools import get_order_status

@@ -1,4 +1,3 @@
-
 import pytest
 
 from support_agent.llm_client import create_llm_client

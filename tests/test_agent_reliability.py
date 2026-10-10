@@ -62,9 +62,7 @@ def test_failed_model_call_does_not_commit_turn(monkeypatch):
     original_messages = [dict(message) for message in session.messages]
 
     client = MagicMock()
-    client.chat.completions.create.side_effect = RuntimeError(
-        "Simulated model failure"
-    )
+    client.chat.completions.create.side_effect = RuntimeError("Simulated model failure")
 
     monkeypatch.setattr(
         tool_calling,

@@ -11,9 +11,7 @@ def make_response(content: str):
         tool_calls=None,
         model_dump=MagicMock(),
     )
-    return SimpleNamespace(
-        choices=[SimpleNamespace(message=message)]
-    )
+    return SimpleNamespace(choices=[SimpleNamespace(message=message)])
 
 
 def test_follow_up_retains_conversation_history(monkeypatch):
@@ -24,12 +22,9 @@ def test_follow_up_retains_conversation_history(monkeypatch):
 
     responses = [
         make_response(
-            "Order #4821 has shipped. "
-            "Estimated delivery is October 12, 2026."
+            "Order #4821 has shipped. Estimated delivery is October 12, 2026."
         ),
-        make_response(
-            "The estimated delivery date is October 12, 2026."
-        ),
+        make_response("The estimated delivery date is October 12, 2026."),
     ]
 
     def fake_create(**kwargs):
@@ -64,8 +59,7 @@ def test_follow_up_retains_conversation_history(monkeypatch):
         for message in second_turn_messages
     )
     assert any(
-        message.get("role") == "assistant"
-        and message.get("content") == first_answer
+        message.get("role") == "assistant" and message.get("content") == first_answer
         for message in second_turn_messages
     )
 
@@ -74,9 +68,7 @@ def test_sessions_are_isolated():
     session_a = tool_calling.create_session()
     session_b = tool_calling.create_session()
 
-    session_a.messages.append(
-        {"role": "user", "content": "Private conversation A"}
-    )
+    session_a.messages.append({"role": "user", "content": "Private conversation A"})
 
     assert not any(
         message.get("content") == "Private conversation A"
@@ -95,6 +87,7 @@ def test_empty_message_is_rejected():
         raise AssertionError("Expected ValueError")
 
     assert len(session.messages) == 1
+
 
 from support_agent.tool_calling import create_session, handle_message
 

@@ -1,4 +1,3 @@
-
 from unittest.mock import patch
 
 import pytest
@@ -18,9 +17,7 @@ from support_agent.llm_classifier import classify_ticket
 def test_timeout_is_propagated(mock_create_client):
     client = mock_create_client.return_value
 
-    client.chat.completions.parse.side_effect = APITimeoutError(
-        request=None
-    )
+    client.chat.completions.parse.side_effect = APITimeoutError(request=None)
 
     with pytest.raises(APITimeoutError):
         classify_ticket("Where is order #4821?")

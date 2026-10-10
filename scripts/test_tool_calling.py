@@ -1,4 +1,3 @@
-
 from dotenv import load_dotenv
 
 from support_agent.tool_calling import handle_ticket

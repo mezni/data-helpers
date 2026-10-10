@@ -38,7 +38,7 @@ def create_session() -> AgentSession:
                 "content": SYSTEM_PROMPT,
             }
         ]
-    )    
+    )
 
 
 ORDER_STATUS_TOOL = {
@@ -144,7 +144,6 @@ def execute_tool(name: str, raw_arguments: str) -> dict:
     return {"error": "unsupported_tool"}
 
 
-
 def handle_message(
     session: AgentSession,
     user_message: str,
@@ -160,13 +159,9 @@ def handle_message(
     working_messages = [dict(message) for message in session.messages]
 
     if not working_messages:
-        working_messages.append(
-            {"role": "system", "content": SYSTEM_PROMPT}
-        )
+        working_messages.append({"role": "system", "content": SYSTEM_PROMPT})
 
-    working_messages.append(
-        {"role": "user", "content": user_message.strip()}
-    )
+    working_messages.append({"role": "user", "content": user_message.strip()})
 
     client = create_llm_client()
 
@@ -186,18 +181,14 @@ def handle_message(
             if answer is None:
                 raise ValueError("The model returned an empty response.")
 
-            working_messages.append(
-                {"role": "assistant", "content": answer}
-            )
+            working_messages.append({"role": "assistant", "content": answer})
 
             # Commit history only after the turn completes successfully.
             session.messages = working_messages
             return answer
 
         # Keep the assistant's tool-call message in the history.
-        working_messages.append(
-            assistant_message.model_dump(exclude_none=True)
-        )
+        working_messages.append(assistant_message.model_dump(exclude_none=True))
 
         for call in tool_calls:
             logger.info(

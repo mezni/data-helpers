@@ -1,4 +1,3 @@
-
 from unittest.mock import MagicMock, patch
 
 import pytest
@@ -34,9 +33,7 @@ def test_agent_stops_after_max_rounds(mock_create_client):
     with pytest.raises(RuntimeError, match="exceeded the limit"):
         handle_ticket("Where is order #4821?")
 
-    assert (
-        client.chat.completions.create.call_count == 5
-    )
+    assert client.chat.completions.create.call_count == 5
 
 
 def test_executes_known_tool():
