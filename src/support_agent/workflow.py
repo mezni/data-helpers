@@ -1,6 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Any, Literal
 
+Route = Literal[
+    "order_lookup",
+    "knowledge_search",
+    "clarify_order_id",
+]
 
 @dataclass
 class WorkflowState:
@@ -25,6 +30,20 @@ def _mark_step(state: WorkflowState, step: str) -> None:
     state.current_step = step
     state.completed_steps.append(step)
 
+def route_workflow(
+    category: str,
+    order_id: str | None,
+    needs_order_lookup: bool,
+) -> Route:
+    if category == "order_status":
+        if needs_order_lookup and order_id is not None:
+            return "order_lookup"
+        return "clarify_order_id"
+
+    if category in {"refund", "general"}:
+        return "knowledge_search"
+
+    raise ValueError(f"Unsupported ticket category: {category}")
 
 def run_workflow(ticket: str) -> WorkflowState:
     state = WorkflowState(ticket=ticket, status="running")
@@ -78,6 +97,61 @@ def run_workflow(ticket: str) -> WorkflowState:
             else:
                 state.answer = (
                     "I couldn't find an answer in the available support documentation."
+                )
+
+        state.status = "completed"
+        state.current_step = "completed"
+        return state
+
+        route = route_workflow(
+            category=classification.category,
+            order_id=classification.order_id,
+            needs_order_lookup=classification.needs_order_lookup,
+        )
+
+        state.current_step = "route"
+        state.tool_results["selected_route"] = route
+        _mark_step(state, "route")
+
+        if route == "order_lookup":
+            state.current_step = "order_lookup"
+            result = get_order_status(classification.order_id)
+            state.tool_results["order_status"] = result
+            _mark_step(state, "order_lookup")
+
+            if result["status"] == "not_found":
+                state.answer = (
+                    f"I couldn't find order #{classification.order_id}. "
+                    "Please check the order number and try again."
+                )
+            else:
+                state.answer = (
+                    f"Order #{classification.order_id} is "
+                    f"{result['status']}. "
+                    f"Estimated delivery: {result['estimated_delivery']}."
+                )
+
+        elif route == "clarify_order_id":
+            state.answer = (
+                "I can help check your order status. "
+                "Please provide your order number."
+            )
+
+        elif route == "knowledge_search":
+            state.current_step = "knowledge_search"
+            articles = search_knowledge_base(state.ticket)
+            state.tool_results["knowledge_search"] = articles
+            _mark_step(state, "knowledge_search")
+
+            if articles:
+                state.answer = "\n\n".join(
+                    f"{article['title']}: {article['content']}"
+                    for article in articles
+                )
+            else:
+                state.answer = (
+                    "I couldn't find an answer in the available "
+                    "support documentation."
                 )
 
         state.status = "completed"
