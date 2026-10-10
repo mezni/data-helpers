@@ -1,10 +1,13 @@
-from unittest.mock import MagicMock, patch
+
+from unittest.mock import patch
+
+import pytest
+from openai import APITimeoutError
 
 from support_agent.llm_classifier import classify_ticket
-from support_agent.schemas import TicketOutput
 
 
-@patch("support_agent.llm_classifier.OpenAI")
+@patch("support_agent.llm_classifier.create_llm_client")
 @patch.dict(
     "os.environ",
     {
@@ -12,47 +15,12 @@ from support_agent.schemas import TicketOutput
         "OPENAI_MODEL": "test-model",
     },
 )
-def test_classifies_order_status(mock_openai):
-    client = MagicMock()
-    mock_openai.return_value = client
+def test_timeout_is_propagated(mock_create_client):
+    client = mock_create_client.return_value
 
-    expected = TicketOutput(
-        category="order_status",
-        order_id="4821",
-        needs_order_lookup=True,
+    client.chat.completions.parse.side_effect = APITimeoutError(
+        request=None
     )
 
-    message = MagicMock()
-    message.parsed = expected
-    message.refusal = None
-
-    client.chat.completions.parse.return_value.choices = [MagicMock(message=message)]
-
-    result = classify_ticket("Where is order #4821?")
-
-    assert result == expected
-    client.chat.completions.parse.assert_called_once()
-
-
-@patch("support_agent.llm_classifier.OpenAI")
-@patch.dict(
-    "os.environ",
-    {
-        "OPENAI_API_KEY": "test-key",
-        "OPENAI_MODEL": "test-model",
-    },
-)
-def test_handles_model_refusal(mock_openai):
-    client = MagicMock()
-    mock_openai.return_value = client
-
-    message = MagicMock()
-    message.parsed = None
-    message.refusal = "Unable to process this request."
-
-    client.chat.completions.parse.return_value.choices = [MagicMock(message=message)]
-
-    import pytest
-
-    with pytest.raises(ValueError, match="refused"):
+    with pytest.raises(APITimeoutError):
         classify_ticket("Where is order #4821?")

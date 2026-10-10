@@ -1,11 +1,7 @@
-import os
+from openai import APIConnectionError, APIStatusError, APITimeoutError
 
-from dotenv import load_dotenv
-from openai import OpenAI
-
+from support_agent.llm_client import create_llm_client
 from support_agent.schemas import TicketInput, TicketOutput
-
-load_dotenv()
 
 
 SYSTEM_PROMPT = """
@@ -30,27 +26,24 @@ Return data matching the supplied output schema.
 """.strip()
 
 
-
 def classify_ticket(ticket: str) -> TicketOutput:
     validated = TicketInput(message=ticket)
+    client = create_llm_client()
 
-    api_key = os.getenv("OPENAI_API_KEY")
-    model = os.getenv("OPENAI_MODEL")
-
-    if not api_key or not model:
-        raise RuntimeError("Set OPENAI_API_KEY and OPENAI_MODEL.")
-
-    client = OpenAI(api_key=api_key)
-
-    response = client.chat.completions.parse(
-        model=model,
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": validated.message},
-        ],
-        response_format=TicketOutput,
-        temperature=0,
-    )
+    try:
+        response = client.chat.completions.parse(
+            model=__import__("os").environ["OPENAI_MODEL"],
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": validated.message},
+            ],
+            response_format=TicketOutput,
+            temperature=0,
+        )
+    except (APITimeoutError, APIConnectionError):
+        raise
+    except APIStatusError:
+        raise
 
     message = response.choices[0].message
 

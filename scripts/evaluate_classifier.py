@@ -1,4 +1,3 @@
-
 import json
 import sys
 from pathlib import Path
@@ -19,9 +18,7 @@ def load_dataset():
             try:
                 cases.append(json.loads(line))
             except json.JSONDecodeError as exc:
-                raise ValueError(
-                    f"Invalid JSON on line {line_number}"
-                ) from exc
+                raise ValueError(f"Invalid JSON on line {line_number}") from exc
 
     return cases
 
@@ -68,14 +65,8 @@ def main():
     print(f"Failed calls:           {failures}")
 
     if attempted:
-        print(
-            "Category accuracy:      "
-            f"{category_correct / total:.1%} of all cases"
-        )
-        print(
-            "Exact-match accuracy:   "
-            f"{exact_correct / total:.1%} of all cases"
-        )
+        print(f"Category accuracy:      {category_correct / total:.1%} of all cases")
+        print(f"Exact-match accuracy:   {exact_correct / total:.1%} of all cases")
 
     if failures or exact_correct != total:
         sys.exit(1)

@@ -6,6 +6,9 @@
 ## [0.0.7] — Prompt Engineering and Evaluation
 - Prompt engineering and evaluation implemented.
 
+## [0.0.8] — Improve LLM Client Reliability
+- Improve LLM client reliability.
+
 ## [0.0.5] — LLM Ticket Classification
 - Integrated LLM ticket classification.
 
